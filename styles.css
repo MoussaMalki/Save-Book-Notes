@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap');
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none; /* removes the dots from the UL elements*/
+    text-decoration: none;
+}
+
+:root { 
+    --main-color:  #3D8361 ;
+    --text-color: #395B64;
+  
+ } 
+
+ html::-webkit-scrollbar {
+   width: 0.5rem;
+}
+html::-webkit-scrollbar-track {
+ background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+
+/******************************** styling the upper section **************************************/
+
+ #upper-sec {
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+    color: var(--text-color);
+ }
+ #logo img {
+    width: 20rem;
+ }
+
+ .inputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+ }
+ .inputs input {
+    margin-bottom: 2vh;
+    outline: none;
+    height: 1.9rem;
+    border-radius: 5px;
+    border: 2px solid black;
+ }
+ .inputs textarea {
+    margin-bottom: 2.5vh;
+    resize: none;
+    outline: none;
+    height: 5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+ }
+ .inputs label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: relative;
+    left: 0.5rem;
+    top: 0.4rem;
+   width: 2.5rem;
+    background-color: white;
+ }
+ #title-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: relative;
+    left: 0.5rem;
+    top: 0.4rem;
+    width: 2rem;
+    background-color: white;
+ }
+ #author-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: relative;
+    left: 0.5rem;
+    top: 0.4rem;
+    width: 2.7rem;
+    background-color: white;
+ }
+
+ .inputs span {
+    color: var(--main-color);
+ }
+ .inputs button {
+    height: 1.8rem;
+    width: 6rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: 600;
+    margin: auto;
+    cursor: pointer;
+ }
+.inputs button:hover {
+    background-color:#567F4C;
+    transition: 0.7s ease;
+}
+
+
+ /******************************** lower section **************************************/
+
+ #lower-sec {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+    color: var(--text-color);
+ }
+ .search-bar {
+   position: relative;
+ }
+ .search-bar i {
+   position: absolute;
+   top: 8px;
+   right: 8px;
+   font-size: 1.2rem;
+   color: var(--main-color);
+ }
+ .search-bar input{
+    margin-bottom: 2vh;
+    outline: none;
+    height: 1.9rem;
+    border-radius: 5px;
+    border: 2px solid black;
+ }
+ .book-cards div {
+    position: relative;
+    margin-bottom: 2vh;
+    font-size: 0.8rem;
+    height: 1.9rem;
+    width: 16.2rem;
+    border-radius: 5px;
+    border: 2px solid black;
+    padding: 2px;
+ }
+ .book-cards {
+   height: 10rem;
+   overflow-y: scroll;
+   overflow-y: overlay;
+   
+ }
+ .book-cards::-webkit-scrollbar,  #opened-book::-webkit-scrollbar  {
+   width: 0.2rem;
+}
+.book-cards::-webkit-scrollbar-track, #opened-book::-webkit-scrollbar-track{
+ background: transparent;
+}
+.book-cards::-webkit-scrollbar-thumb, #opened-book::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 5rem;
+}
+[name="open-book"]{
+    font-size: 1.2rem;
+    position: absolute;
+    right: 2px;
+    top: 0.3vw;
+    color:var(--main-color);
+    cursor: pointer;
+ } 
+[name="delete-book"] {
+    font-size: 1.2rem;
+    position: absolute;
+    right: 20px;
+    top: 0.3vw;
+    color: red;
+    cursor: pointer;
+ }
+
+ #opened-book {
+   position: absolute;
+   width: 20rem;
+   height: 20rem;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   display: flex;  
+   text-align: center;
+   flex-direction: column;
+   z-index: 999;
+   background-color: white;
+   border-radius: 5px;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   overflow-y: scroll;
+   overflow-y: overlay;
+ }
+ #opened-book h2 {
+   margin-top: 1.4rem;
+   margin-bottom: 1.6rem;
+   font-size: 1.6rem;
+   color: var(--main-color);
+ 
+ }
+ #opened-book h6 {
+   position: absolute;
+   top: 5px;
+   left: 10px;
+ }
+ #opened-book p {
+   word-wrap: break-word;
+   white-space: pre-wrap;
+   word-break: break-word;
+ }
+ #opened-book i {
+   font-size: 1.8rem;
+   position: absolute;
+   top: 1px;
+   right: 1px;
+   cursor: pointer;
+   color: red;
+  
+ }
